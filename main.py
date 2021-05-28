@@ -56,29 +56,7 @@ astf = df_selec.to_dict('records')
 result_dic = astf[0]
 labels = list( result_dic.keys())
 values = list(result_dic.values())
-print(labels)
-print(values)
-
-
-
 
 fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.3 , pull=[0.1, 0, 0])])
-
-
-col1, col2 = st.beta_columns(2)
-col1.subheader("jhsdasd")
-col1.write(fig)
-
-
-
-
-
-
-
-
-
-
-
-
-# href = f'<a href="https://data.chhs.ca.gov/dataset/covid-19-vaccine-progress-dashboard-data-by-zip-code/resource/c44b0d65-2fb3-4142-b34c-eff0cd0324c1" >Covid Dataset</a>'
-# st.markdown(href, unsafe_allow_html=True)
+st.subheader("Pie Chart")
+st.write(fig)
